@@ -4,7 +4,7 @@ interface Props {
   showNewsletter?: boolean
 }
 
-const { title, showNewsletter = true } = Astro.props
+const { title, showNewsletter = false } = Astro.props
 
 import '@fontsource-variable/inter'
 import NavComponent from '@/components/NavComponent.astro'
@@ -16,11 +16,11 @@ import { ViewTransitions } from 'astro:transitions'
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content="Christian Mendez Official Website" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} | Astro Portfolio Starter</title>
+    <title>{title} | Christian Mendez</title>
     <ViewTransitions />
 
     <script src="@/scripts/initialize-theme.ts"></script>
