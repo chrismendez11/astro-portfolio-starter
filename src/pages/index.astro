@@ -7,7 +7,7 @@ import developerImage from '@/images/developer.svg'
 import mindMapImage from '@/images/mind-map.svg'
 import codeReviewImage from '@/images/code-review.svg'
 import dotsTriangle from '@/images/dots-triangle.svg'
-import avatarImage from '@/images/avatar.png'
+import photo from '@/images/photo-christian-m.jpeg'
 ---
 
 <Layout title="Home">
@@ -31,13 +31,16 @@ import avatarImage from '@/images/avatar.png'
     </section>
     <!-- end hero -->
 
-    <section class="max-w-3xl mx-auto px-4 xl:px-0">
+    <section
+      class="max-w-3xl mx-auto px-4 xl:px-0 border-b border-gray-300 dark:border-gray-700 mb-16"
+    >
       <p class="dark:text-gray-100">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non
-        ipsa sed hic illum ex corrupti quasi, corporis consequatur praesentium
-        fugiat perferendis sunt molestias temporibus placeat magnam aspernatur
-        sequi iure pariatur reprehenderit maxime doloremque ut facilis illo.
-        Corrupti, vel et?
+        A passionate software developer, self-taught person who enjoys creating
+        solutions to real-world complex problems, taking a deep undestanding on what needs to be done and providing a scalable and efficient solution for it, working right now as
+        backend developer at <Link
+          href="https://www.linkedin.com/company/mayfer-dev/"
+          newTab={true}>Mayfer</Link
+        >.
       </p>
 
       <div class="flex justify-between items-center my-14">
@@ -51,8 +54,40 @@ import avatarImage from '@/images/avatar.png'
     </section>
 
     <section
+      id="about"
+      class="scroll-mt-32 max-w-3xl mx-auto relative px-4 xl:px-0 border-b border-gray-300 dark:border-gray-700"
+    >
+      <h3 class="dark:text-gray-100 font-bold section-title mb-8">About me</h3>
+      <div class="about-me-cont">
+        <div class="about-me-title-cont about-me-title-cont__text">
+          <p class="dark:text-gray-100 mt-6 sm:mt-0">
+            Hi there! My name is Christian Mendez, I'm from Guatemala 🇬🇹 I started programming since I was 15 and I would be impressed seeing what could be done by writing code, since then, I knew a wanted to get into the tech industry.
+          </p>
+          <p class="dark:text-gray-100 mt-6 sm:mt-0">I've always been a self-taught person since I was a child, that's why I've always liked to learn new things like languages, different cultures/life-styles and of course software development. </p>
+        </div>
+        <div class="about-me-title-cont about-me-title-cont__photo">
+          <Image
+            src={photo}
+            alt="avatar"
+            class="rounded-full photo-image border border-black"
+          />
+        </div>
+      </div>
+
+      <div class="my-16">
+        <iframe
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/hkGHaPwj29Y?si=FARUMX6M9AhXE7JU"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section
       id="projects"
-      class="scroll-mt-16 max-w-3xl mx-auto border-t border-b border-gray-300 dark:border-gray-700 py-16 mb-16 relative px-4 xl:px-0"
+      class="scroll-mt-16 max-w-3xl mx-auto py-16 relative px-4 xl:px-0"
     >
       <h3 class="dark:text-gray-100 font-bold">
         Here are some projects I've worked on:
@@ -119,29 +154,6 @@ import avatarImage from '@/images/avatar.png'
     </section>
 
     <section
-      id="about"
-      class="scroll-mt-32 max-w-3xl mx-auto relative px-4 xl:px-0"
-    >
-      <h3 class="dark:text-gray-100 font-bold">Get to know me</h3>
-
-      <div class="flex items-center flex-col sm:flex-row mt-6">
-        <Image src={avatarImage} alt="avatar" class="rounded-full w-32 h-32" />
-        <div>
-          <p class="dark:text-gray-100 sm:ml-6 mt-6 sm:mt-0">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam
-            quam praesentium eligendi autem voluptate vero quo voluptatem, qui
-            possimus debitis iste amet ea voluptatum aut consectetur. Velit quos
-            at explicabo?
-          </p>
-        </div>
-      </div>
-
-      <div class="my-16">
-        <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/hkGHaPwj29Y?si=FARUMX6M9AhXE7JU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
-
-    <section
       id="contact"
       class="scroll-mt-28 bg-gray-100 dark:bg-slate-800 mt-10 py-12 px-4 xl:px-0"
     >
@@ -153,15 +165,10 @@ import avatarImage from '@/images/avatar.png'
         </div>
 
         <p class="dark:text-gray-100 mt-6">
-          Static sites cannot submit forms on their own. However, services like
-          <Link href="https://www.netlify.com/docs/form-handling" newTab>
-            Netlify Forms
-          </Link>
-           or
-          <Link href="https://formspree.io" newTab>FormSpree</Link>
-           can help you do this without a backend.
+          Got a question, a project in mind, or just want to say hello? I'd love
+          to hear from you! Feel free to reach out by filling out the form below
+          and I'll get back to you as soon as possible.
         </p>
-
         <div class="mt-12">
           <form action="#" class="grid grid-cols-2 gap-6">
             <div class="col-span-2 sm:col-span-1">
@@ -215,6 +222,49 @@ import avatarImage from '@/images/avatar.png'
 
 <style>
   .main-title-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .photo-image {
+    /* border: 1px solid var(--tw-border-opacity); */
+    padding: 5px;
+    max-width: 12rem;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 22px;
+  }
+  .about-me-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-me-title-cont__photo {
+    order: 1;
+  }
+  .about-me-title-cont__text {
+    order: 2;
+  }
+  @media (min-width: 640px) {
+    .section-title {
+      text-align: start;
+      /* margin-left: 1rem; */
+    }
+    .about-me-cont {
+      flex-direction: row;
+      gap: 10px;
+    }
+    .about-me-title-cont__photo {
+      order: 2;
+    }
+    .about-me-title-cont__text {
+      align-items: end;
+      order: 1;    
+      gap: 20px;
+    }
+  }
+  .about-me-title-cont {
     display: flex;
     flex-direction: column;
     justify-content: center;
