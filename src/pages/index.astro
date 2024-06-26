@@ -55,7 +55,7 @@ import photo from '@/images/photo-christian-m.jpeg'
 
     <section
       id="about"
-      class="scroll-mt-32 max-w-3xl mx-auto relative px-4 xl:px-0 border-b border-gray-300 dark:border-gray-700"
+      class="scroll-mt-32 max-w-3xl mx-auto relative px-4 xl:px-0 border-b border-gray-300 dark:border-gray-700 pb-16"
     >
       <h3 class="dark:text-gray-100 font-bold section-title mb-8">About me</h3>
       <div class="about-me-cont">
@@ -72,16 +72,6 @@ import photo from '@/images/photo-christian-m.jpeg'
             class="rounded-full photo-image border border-black"
           />
         </div>
-      </div>
-
-      <div class="my-16">
-        <iframe
-          class="w-full aspect-video"
-          src="https://www.youtube.com/embed/hkGHaPwj29Y?si=FARUMX6M9AhXE7JU"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
       </div>
     </section>
 
@@ -102,12 +92,11 @@ import photo from '@/images/photo-christian-m.jpeg'
           <IconCheckmark />
           <span class="ml-4">
             <h4 class="text-gray-800 dark:text-gray-100 font-semibold">
-              Project Name 1
+              <a href="https://poke-api-by-christian-m.netlify.app/" target="_blank" class="project_link" >Pokedex</a>
             </h4>
             <p class="text-gray-600 dark:text-gray-300 mt-2">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Veritatis ad neque doloribus quod exercitationem est nulla
-              reiciendis in unde eum.
+              A simple interactive pokedex using the famous API <a href="https://pokeapi.co/" target="_blank"  class="project_reference">PokeAPI</a>, it includes a search bar for pokemons, 
+              a dropdown filter for different pokemon types and specific details about the pokemon when selecting one.
             </p>
           </span>
         </li>
@@ -115,12 +104,10 @@ import photo from '@/images/photo-christian-m.jpeg'
           <IconCheckmark />
           <span class="ml-4">
             <h4 class="text-gray-800 dark:text-gray-100 font-semibold">
-              Project Name 2
+              <a href="https://trivia-quiz-christian-m.netlify.app/" target="_blank" class="project_link">Trivia Quiz</a>
             </h4>
             <p class="text-gray-600 dark:text-gray-300 mt-2">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Veritatis ad neque doloribus quod exercitationem est nulla
-              reiciendis in unde eum.
+              This project is a fun and interactive trivia quiz game designed to test players' knowledge across various topics. The game aims to provide an engaging experience through a series of multiple-choice questions, with players competing to achieve the highest score.
             </p>
           </span>
         </li>
@@ -128,25 +115,10 @@ import photo from '@/images/photo-christian-m.jpeg'
           <IconCheckmark />
           <span class="ml-4">
             <h4 class="text-gray-800 dark:text-gray-100 font-semibold">
-              Project Name 3
+              <a href="https://aerolab-challenge-christian-m.netlify.app/" target="_blank" class="project_link">Aerolab Challenge</a>
             </h4>
             <p class="text-gray-600 dark:text-gray-300 mt-2">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Veritatis ad neque doloribus quod exercitationem est nulla
-              reiciendis in unde eum.
-            </p>
-          </span>
-        </li>
-        <li class="flex items-start">
-          <IconCheckmark />
-          <span class="ml-4">
-            <h4 class="text-gray-800 dark:text-gray-100 font-semibold">
-              Project Name 4
-            </h4>
-            <p class="text-gray-600 dark:text-gray-300 mt-2">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Veritatis ad neque doloribus quod exercitationem est nulla
-              reiciendis in unde eum.
+              This project involves the development of a simple and engaging online store where users can purchase items using coins and includes different filters for the products. Additionally, users have the opportunity to redeem more coins in case they run out of them.
             </p>
           </span>
         </li>
@@ -170,7 +142,7 @@ import photo from '@/images/photo-christian-m.jpeg'
           and I'll get back to you as soon as possible.
         </p>
         <div class="mt-12">
-          <form action="#" class="grid grid-cols-2 gap-6">
+          <form action="#" name="contact" method="POST" data-netlify="true" onsubmit="submit" class="grid grid-cols-2 gap-6">
             <div class="col-span-2 sm:col-span-1">
               <label for="name" class="block dark:text-gray-100">Name</label>
               <input
@@ -221,6 +193,18 @@ import photo from '@/images/photo-christian-m.jpeg'
 </Layout>
 
 <style>
+  .project_reference {
+    color: #2563eb;
+    font-weight: 500;
+  }
+  /* .project_link {
+    color: #000;
+    font-weight: 600;
+  } */
+  .project_link:hover {
+    color: #5047e5;
+    text-decoration: underline;
+  }
   .main-title-cont {
     display: flex;
     flex-direction: column;
